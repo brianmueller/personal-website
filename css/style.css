@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/css?family=BenchNine:300,400,700);
+
+/* ////////// GENERAL ////////// */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ////////// BACKGROUND ////////// */
+
+body {
+  background-image: url("../images/mueller-nyc-fireworks-small.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+}
+.gray-bg {
+  background: rgba(17, 17, 17, 0.85);
+  border-radius: 8px;
+}
+
+/* ////////// LAYOUT ////////// */
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+.col-1 {
+  float: left;
+  width: 32%;
+  /* 2% each, 2 spaces: 100-4=96; 96/3=32 */
+}
+.col-2 {
+  float: left;
+  width: 66%;
+  /* 2x32=64; 64+2(absorb 1 margin)=66 */
+}
+.col-3 {
+}
+.clearfix:after {
+  content:".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+[class*="col-"] {
+  /* anything that has a class value of col-anything */
+  margin-left: 2%;
+}
+.first {
+  /* any first column to the left */
+  margin-left: 0%;
+}
+header {
+  height: 175px;
+}
+section {
+  padding: 20px;
+}
+footer {
+  text-align: center;
+  padding: 130px;
+}
+.fp-text {
+  height: 461px;
+  overflow: auto;
+  padding: 10px;
+}
+#welcome {
+  margin-top:25px;
+}
+
+/* ////////// NAVIGATION ////////// */
+
+.button {
+  width: 22%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 1);
+  float: left;
+  margin: 2%;
+  margin-top: 0%;
+  text-align: center;
+  opacity: 0.9;
+  color: white;
+  position: relative;
+  box-shadow: 3px 3px 3px #222;
+}
+.button:hover {
+  opacity:1;
+}
+/* color scheme: https://color.adobe.com/turning-blue-into-orange-color-theme-2087140/?showPublished=true extraPurpleyBlueColor: 4C1F66*/
+#button1 {
+  /* blue */
+  background-color:#000F8F;
+  margin-left: 0%;
+}
+#button2 {
+  /* purple */
+  background-color:#7F1966;
+}
+#button3 {
+  /* red */
+  background-color:#B21225;
+}
+#button4 {
+  /* yellow */
+  background-color:#FF7F00;
+  margin-right: 0%;
+}
+
+/* ////////// TEXT ////////// */
+
+/* CENTERING TEXT: http://www.w3.org/Style/Examples/007/center.en.html#vertical3 */
+.smText {
+  font-size: 1.2em;
+}
+.smMedText {
+  font-size: 1.3em;
+}
+.medText {
+  font-size: 2em;
+}
+.lgText {
+  font-size: 3em;
+}
+#cool {
+  font-size: 1.3em;
+  /*             line-height: 25px; */
+}
+#cooler {
+  font-size: 1.6em;
+  /*             line-height: 20px; */
+}
+#coolest {
+  font-size: 1.7em;
+  /*             line-height: 15px; */
+}
+.buttonText {
+  font-family:'BenchNine', sans-serif;
+  font-size:2em;
+  opacity: 1;
+}
+.centerVert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.vert {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.boldText {
+  font-weight: 700;
+  letter-spacing:2px;
+}
+.lightText {
+  font-weight: 300;
+  color: #ddd;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.shadow {
+  text-shadow: 1px 1px 1px black;
+}
+.blue-light {
+  color: rgb(195, 215, 243);
+}
+.blue-medium {
+  color: rgb(125, 155, 231);
+}
+.blue-dark {
+  color: rgb(0, 93, 214);
+}
+.red {
+  color: #B21225;
+}
+.yellow {
+  color: #FF7F00;
+}
+p, li, footer {
+  font-family:'BenchNine', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  color: white;
+  opacity: 1;
+}
+
+/* ////////// OTHER ////////// */
+
+img {
+  width: 100%;
+  height: 100%;
+}
+#mug, .button {
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px #222;
+}
+.solid {
+  opacity: 1;
+}
+.right {
+  text-align: right;
+}
+.margin0 {
+  margin: 0;
+}
+.margin10 {
+  margin:10px;
+  margin-left:0;
+}
+.line {
+  border-bottom: 3px solid white;
+  padding-bottom: 15px;
+}
+/* Scrollbar setup */
+.fp-text::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(100, 100, 100, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(60, 60, 60, 0.4);
+}
